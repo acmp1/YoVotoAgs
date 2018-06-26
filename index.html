@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon">
+
+    <title>Yo voto</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 text-justify col-md-7 py-4">
+              <h4 class="text-white">Acerca de</h4>
+              <p class="text-muted">El voto es una de los derechos que tenemos como ciudadanos más importantes. Gracias a este, podemos involucrarnos en nuestro país y dar nuestras opiniones, pero, ¿qué pasa cuando desperdiciamos nuestro voto? Tenemos que darnos cuenta que como país es realmente importante practicar este derecho, pues cuando no lo hacemos estamos dejando que otras personas decidan por nosotros y la persona que decidamos como presidente no será legítimo, pues entre menos personas voten menos personas realmente escogieron a esa persona. Votar es muy importante y deberíamos de hacerlo.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contacto</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.facebook.com/Yo-voto-1280231622080461/" class="text-white">Like en Facebook</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            <strong>Yo voto</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+          <div class="embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F298364707368367%2Fvideos%2F301444060393765%2F&show_text=0&width=560" allowfullscreen></iframe>
+          </div>
+
+          <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Yo Voto Aguascalientes</h1>
+            <p class="lead text-muted">Aquí podrás encontrar el perfil de tu candidato distrital #UnVotoRazonado</p>
+          </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row" id="distritos"></div>
+
+          <div id="candidatos"> </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Regresar al inicio</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, Yo Voto</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../assets/js/vendor/popper.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/vendor/holder.min.js"></script>
+    
+    <script>
+    
+      // clase candidato
+      var Candidato = function(sobrenombre, nombre, linkFb, linkImagen)
+      {
+        this.sobrenombre = sobrenombre;
+        this.nombre = nombre;
+        this.linkFb = linkFb;
+        this.linkImagen = linkImagen;
+      }
+
+      // clase distrito
+      var Distrito = function(arrCandidato, numero)
+      {
+        this.candidatos = arrCandidato;
+        this.numero = numero;
+      }
+
+      // clase imagen distrito
+      var imgDistrito = function (imagen, numero, informacion)
+      {
+        this.imagen = imagen;
+        this.numero = numero;
+        this.informacion = informacion;
+      }
+
+      var arrDistrito = [];
+      var imagenDistrito = [];
+
+      // Lectura de distritos
+      function readDistrito(){
+        jQuery.get('distritos.txt',function(txt){
+          var tamArchivo = txt.length;
+          var iC = 0;
+          var iContaPal = 0;
+          var str="";
+          var imagen="";
+          var numero="";
+          var informacion="";
+
+          while(iC<tamArchivo)
+          {
+            if(txt[iC]=='\n')
+            {
+              if(iContaPal==0)
+              {
+                numero=str;
+              }
+              if(iContaPal==1)
+              {
+                imagen=str;
+              }
+              if(iContaPal==2)
+              {
+                informacion=str;
+                imagenDistrito.push(new imgDistrito(imagen,numero,informacion));
+              }
+              iContaPal++;
+              if(iContaPal==3)
+              {
+                iContaPal=0;
+              }
+              str="";
+            }
+            str+=txt[iC];
+            iC++;
+          }
+
+        });
+      }
+
+      $(document).ready(function(){
+
+            var i;
+            var appendString="";
+            for(i=0; i<imagenDistrito.length;i++)
+            {
+              appendString+="<div class='col-md-4'><div class='modal' tabindex='-1' role='dialog' id='img"+(i+1)+"'><div class='modal-dialog' role='document'><div class='modal-content'><img class='card-img-top' src="+imagenDistrito[i].imagen+" alt='Card image cap'></div></div></div>";
+              appendString+="<div class='card text-justify mb-4 box-shadow'><img class='card-img-top' src='"+imagenDistrito[i].imagen+"' alt='Card image cap'><div class='card-body'><h5 class='card-title'>Distrito "+imagenDistrito[i].numero+"</h5><p class='card-text'>"+imagenDistrito[i].informacion+"</p><div class='d-flex justify-content-between align-items-center'><div class='btn-group'><button type='button' class='btn btn-sm btn-outline-secondary' data-toggle='modal' data-target='#img"+(i+1)+"'>Ver</button><a href='#distrito"+imagenDistrito[i].numero+"'><button type='button' class='btn btn-sm btn-outline-secondary'>Info</button></a></div></div></div></div></div>";
+                console.log(imagenDistrito[i].imagen);
+            }
+            $("#distritos").append(appendString);
+          });
+
+      // Lectura de candidatos
+      function readFile(){
+        jQuery.get('InformacionCandidatosF.txt',function(txt){
+            var tamArchivo = txt.length;
+            var iC = 0;
+            var str="";
+            var numAux="";
+            var iContaCandidato=0;
+            var arrCandidato = [];
+            var sobrenombre = "";
+            var nombre = "";
+            var linkFb = "";
+            var linkImagen = "";
+
+            while(iC<tamArchivo)
+            {
+              if(txt[iC]=='*'){
+                //console.log(str);
+                numAux=str;
+                if(iC>0)
+                {
+                  arrDistrito.push(new Distrito(arrCandidato,numAux-1));
+                  arrCandidato = [];
+                }
+                str="";
+                //console.log("Auxiliar: " + numAux);
+                iC+=6;
+              }
+
+              if(txt[iC]=='\t'||txt[iC]=='\n'){
+                if(txt[iC]=='\t')
+                {
+                    if(iContaCandidato==0)
+                    {
+                      sobrenombre=str;
+                      //console.log(sobrenombre);
+                    }
+                    if(iContaCandidato==1)
+                    {
+                      nombre=str;
+                      //console.log(nombre);
+                    }
+                    if(iContaCandidato==2)
+                    {
+                      linkFb=str;
+                      //console.log(linkFb);
+                    }
+                    iContaCandidato++;
+                    str="";
+                }
+                if(txt[iC]=='\n')
+                {
+                  linkImagen=str;
+                  if(linkImagen=="ñ")
+                  {
+                    linkImagen="Img/ejemploi.jpeg";
+                  }
+                  str="";
+                  arrCandidato.push(new Candidato(sobrenombre,nombre,linkFb,linkImagen));
+                  iContaCandidato=0;
+                }
+                iC++;
+            }
+              str+=txt[iC];
+              iC++;
+            }
+
+            arrDistrito.push(new Distrito(arrCandidato,numAux));
+
+            $(document).ready(function(){
+
+            var i;
+            var appendString="";
+            for(i=1; i<arrDistrito.length;i++)
+            {
+              console.log(arrDistrito[i].numero);
+              appendString+="<nav class='navbar navbar-expand-lg navbar-dark bg-dark'id='distrito"+ arrDistrito[i].numero + "'><button class='navbar-toggler'type='button' data-toggle='collapse' data-target='#navbarsExample08' aria-controls='navbarsExample08' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button><div class='collapse navbar-collapse justify-content-md-center' id='navbarsExample08'><ul class='navbar-nav'><li class='nav-item active'><a class='nav-link' href='#'> Distrito " + arrDistrito[i].numero + "<span class='sr-only'>(current)</span></a></nav>";
+              var j;
+              for(j=0;j<arrDistrito[i].candidatos.length;j++)
+              {
+                if(j==0)
+                {
+                  appendString+="<div class='row justify-content-center'>";
+                }
+                appendString+="<div class='col-lg-2'>"+"<a href='"+arrDistrito[i].candidatos[j].linkFb + "'><img class='rounded-circle' src='"+ arrDistrito[i].candidatos[j].linkImagen + "'alt='Generic placeholder image' width='140' height='140'>" + "</a><h5 align='center'>" + arrDistrito[i].candidatos[j].sobrenombre + "</h5></div>";
+                if(j+1==arrDistrito[i].candidatos.length)
+                {
+                  appendString+="</div>";
+                }
+              }
+            }
+            $("#candidatos").append(appendString);
+          });
+
+        });
+      }
+
+      readFile();
+      readDistrito();
+      
+    </script>
+
+  </body>
+</html>
