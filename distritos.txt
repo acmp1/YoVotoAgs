@@ -1,23 +1,23 @@
 1
-Img/vacios.png
+Img/dist1.png
 Cosío, integrado por 5 secciones: de la 0387 a la 0391. Rincón de Romos, integrado por 21 secciones: de la 0431 a la 0451.
 2
-Img/vacios.png
+Img/dist2.png
 Asientos, integrado por 17 secciones: de la 0338 a la 0354. El llano, integrado por 8 secciones: de la 0479 a la 0486.
 3
-Img/vacios.png
+Img/dist3.png
 Pabellón de Arteaga, integrado por 17 secciones: de la 0415 a la 0430 y la sección 0488. Tepezalá, integrado por 10 secciones: de la 0460 a la 0469.
 4
-Img/vacios.png
+Img/dist4.png
 Jesus María, integrado por 6 secciones: de la 0400 a la 0403, 0405 y la sección 0413. San Francisco de los Romo, integrado por 10 secciones: 0404 y de la 0470 a la 0478.
 5
-Img/vacios.png
+Img/dist5.png
 Aguascalientes, integrado por 18 secciones: 0080, 0082, de la 0086 a la 0090, de la 0594 a la 0596, de la 0598 a la 0601, 0603 y de la 0605 a la 0607.
 6
-Img/vacios.png
+Img/dist6.png
 Aguascalientes, integrado por 37 secciones: de la 0001 a la 0018, de la 0041 a la 0056, de la 0091 a la 0092 y la sección 0320.
 7
-Img/vacios.png
+Img/dist7.png
 Jesus María, integrado por 16 secciones: de la 0392 a la 0399, de la 0406 a la 0412 y la sección 0414.
 8
 Img/vacios.png
