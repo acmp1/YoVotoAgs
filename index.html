@@ -170,7 +170,6 @@
             {
               appendString+="<div class='col-md-4'><div class='modal' tabindex='-1' role='dialog' id='img"+(i+1)+"'><div class='modal-dialog' role='document'><div class='modal-content'><img class='card-img-top' src="+imagenDistrito[i].imagen+" alt='Card image cap'></div></div></div>";
               appendString+="<div class='card text-justify mb-4 box-shadow'><img class='card-img-top' src='"+imagenDistrito[i].imagen+"' alt='Card image cap'><div class='card-body'><h5 class='card-title'>Distrito "+imagenDistrito[i].numero+"</h5><p class='card-text'>"+imagenDistrito[i].informacion+"</p><div class='d-flex justify-content-between align-items-center'><div class='btn-group'><button type='button' class='btn btn-sm btn-outline-secondary' data-toggle='modal' data-target='#img"+(i+1)+"'>Ver</button><a href='#distrito"+imagenDistrito[i].numero+"'><button type='button' class='btn btn-sm btn-outline-secondary'>Info</button></a></div></div></div></div></div>";
-                console.log(imagenDistrito[i].imagen);
             }
             $("#distritos").append(appendString);
           });
@@ -192,7 +191,6 @@
             while(iC<tamArchivo)
             {
               if(txt[iC]=='*'){
-                //console.log(str);
                 numAux=str;
                 if(iC>0)
                 {
@@ -200,7 +198,6 @@
                   arrCandidato = [];
                 }
                 str="";
-                //console.log("Auxiliar: " + numAux);
                 iC+=6;
               }
 
@@ -210,17 +207,14 @@
                     if(iContaCandidato==0)
                     {
                       sobrenombre=str;
-                      //console.log(sobrenombre);
                     }
                     if(iContaCandidato==1)
                     {
                       nombre=str;
-                      //console.log(nombre);
                     }
                     if(iContaCandidato==2)
                     {
                       linkFb=str;
-                      //console.log(linkFb);
                     }
                     iContaCandidato++;
                     str="";
