@@ -20,35 +20,35 @@ Aguascalientes, integrado por 37 secciones: de la 0001 a la 0018, de la 0041 a l
 Img/dist7.png
 Jesus María, integrado por 16 secciones: de la 0392 a la 0399, de la 0406 a la 0412 y la sección 0414.
 8
-Img/vacios.png
+Img/dist8.png
 Calvillo, integrado por 32 secciones: de la 0355 a la 0386. San Jose Gracia, integrado por 8 secciones: de la 0452 a la 0459.
 9
-Img/vacios.png
+Img/dist9.png
 Aguascalientes, integrado por 37 secciones: de la 0246 a la 0258, de la 0261 a la 0270, de la 0310 a la 0314, 0326, de la 0329 a la 0331 y de la 0333 a la 0337.
 10
-Img/vacios.png
+Img/dist10.png
 Aguascalientes, integrado por 43 secciones: de la 0019 a la 0027, de la 0030 a la 0039, de la 0271 a la 0273, de la 0279 a la 0284, 0293, de la 0300 a la 0309, de la 0321 a la 0322 y de la 0327 a la 0328.
 11
-Img/vacios.png
+Img/dist11.png
 Aguascalientes, integrado por 72 secciones: de la 0028 a la 0029, de la 0057 a la 0079, de la 0104 a la 0112, de la 0120 a la 0121, de la 0123 a la 0124, de la 0141 a la 0142, de la 0180 a la 0197 y de la 0200 a la 0213.
 12
-Img/vacios.png
+Img/dist12.png
 Aguascalientes, integrado por 16 secciones: de la 0083 a la 0085, de la 0316 a la 0318, de la 0493 a la 0497, de la 0574 a la 0575, 0597, 0602 y la sección 0604.
 13
-Img/vacios.png
+Img/dist13.png
 Aguascalientes, integrado por 33 secciones: de la 0093 a la 0097, de la 0099 a la 0103, de la 0113 a la 0119, 0122, de la 0489 a la 0492, de la 0498 a la 0507 y la sección 0511.
 14
-Img/vacios.png
+Img/dist14.png
 Aguascalientes, integrado por 32 secciones: 0125, de la 0138 a la 0140, de la 0143 a la 0149, de la 0156 a la 0160, de la 0164 a la 0165, de la 0167 a la 0170, de la 0514 a la 0515, de la 0517 a la 0521 y de la 0526 a la 0528.
 15
-Img/vacios.png
+Img/dist15.png
 Aguascalientes, integrado por 41 secciones: de la 0126 a la 0137, de la 0150 a la 0155, 0516, de la 0522 a la 0525, de la 0529 a la 0533, de la 0558 a la 0559 y de la 0561 a la 0571.
 16
-Img/vacios.png
+Img/dist16.png
 Aguascalientes, integrado por 36 secciones: de la 0508 a la 0510, de la 0512 a la 0513, de la 0548 a la 0557, 0560, de la 0572 a la 0573 y de la 0576 a la 0593.
 17
-Img/vacios.png
+Img/dist17.png
 Aguascalientes, integrado por 63 secciones: 0040, de la 0171 a la 0179, de la 0198 a la 0199, de la 0214 a la 0245, de la 0274 a la 0278, de la 0285 a la 0292 y de la 0294 a la 0299.
 18
-Img/vacios.png
+Img/dist18.png
 Aguascalientes, integrado por 24 secciones: de la 0161 a la 0163, de la 0259 a la 0260, 0315, de la 0323 a la 0325, 0332 y de la 0534 a la 0547.
